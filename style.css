@@ -1,0 +1,36 @@
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: black;
+    }
+
+    .container {
+      width: 420px;
+      height: 320px;
+      background-color: white;
+      position: relative;
+    }
+
+    .square {
+      width: 100px;
+      height: 100px;
+      background: red;
+      animation: квадрат 6s infinite;
+      top: 10px;
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      right: 10px;
+    }
+
+    @keyframes квадрат {
+      0%   { transform: translate(0, 0); background-color: aqua; }
+      25%  { transform: translate(300px, 0); background-color: rgba(255, 0, 0, 0.281); }   /* вправо */
+      50%  { transform: translate(300px, 200px); background-color: black; } /* вниз */
+      75%  { transform: translate(0, 200px); background-color: orange; }   /* влево */
+      100% { transform: translate(0, 0); }  /* вверх */
+    }
